@@ -1,2 +1,7 @@
-angular
-  .module("toDoApp",[]);
+(function() {
+    'use strict';
+
+  angular
+    .module("toDoApp",[]);
+
+})();
