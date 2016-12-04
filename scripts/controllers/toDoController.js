@@ -19,8 +19,16 @@
         function Task(text){
           this.text = text;
           this.isComplete = false;
+          this.editMode = false;
           this.complete = function(){
             this.isComplete = !this.isComplete;
+          };
+          this.edit = function(){
+            this.editMode = true;
+          };
+          this.updateText = function(newText){
+            this.text = newText;
+            this.editMode = false;
           };
         };
       };
