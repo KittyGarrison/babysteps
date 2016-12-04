@@ -10,24 +10,18 @@
         vm.todoText = "";
         vm.todos = [];
         vm.addTodo = addTodo;
-        vm.complete = complete;
 
         function addTodo(text){
           vm.todos.push(new Todo(text));
           vm.todoText = "";
         };
 
-        function complete(todo) {
-          todo.isComplete = !todo.isComplete
-        }
-
         function Todo(text){
           this.text = text;
           this.isComplete = false;
+          this.complete = function(){
+            this.isComplete = !this.isComplete;
+          };
         };
-
-
-
       };
-
 })();

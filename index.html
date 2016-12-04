@@ -14,7 +14,7 @@
       </form>
 
       <ul>
-        <li ng-repeat="todo in todo.todos">{{todo.text}} complete:{{todo.isComplete}} <button type="button" name="button" ng-click="todo.complete(todo)">done</button></li>
+        <li ng-repeat="todo in todo.todos">{{todo.text}} complete:{{todo.isComplete}} <button type="button" name="button" ng-click="todo.complete()">done</button></li>
       </ul>
     </div>
 
