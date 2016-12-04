@@ -8,16 +8,18 @@
       function ToDoController() {
         var vm = this;
         vm.todoText = "";
-        vm.todos = [
-          {text : "first",
-          isComplete : false}
-        ];
+        vm.todos = [];
         vm.addTodo = addTodo;
+        vm.complete = complete;
 
         function addTodo(text){
           vm.todos.push(new Todo(text));
           vm.todoText = "";
         };
+
+        function complete(todo) {
+          todo.isComplete = !todo.isComplete
+        }
 
         function Todo(text){
           this.text = text;
