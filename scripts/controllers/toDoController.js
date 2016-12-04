@@ -3,20 +3,20 @@
 
   angular
     .module("toDoApp")
-    .controller('ToDoController', ToDoController);
+    .controller('ListController', ListController);
 
-      function ToDoController() {
+      function ListController() {
         var vm = this;
-        vm.todoText = "";
-        vm.todos = [];
-        vm.addTodo = addTodo;
+        vm.taskText = "";
+        vm.taskList = [];
+        vm.addTask = addTask;
 
-        function addTodo(text){
-          vm.todos.push(new Todo(text));
-          vm.todoText = "";
+        function addTask(text){
+          vm.taskList.push(new Task(text));
+          vm.taskText = "";
         };
 
-        function Todo(text){
+        function Task(text){
           this.text = text;
           this.isComplete = false;
           this.complete = function(){

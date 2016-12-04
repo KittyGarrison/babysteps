@@ -6,15 +6,15 @@
 
   <body ng-app="toDoApp">
     <h1>To Do</h1>
-    <div ng-controller="ToDoController as todo">
+    <div ng-controller="ListController as list">
 
-      <form ng-submit="todo.addTodo(todo.todoText)">
-        <input type="text" ng-model="todo.todoText">
+      <form ng-submit="list.addTask(list.taskText)">
+        <input type="text" ng-model="list.taskText">
         <input type="submit" value="submit">
       </form>
 
       <ul>
-        <li ng-repeat="todo in todo.todos">{{todo.text}} complete:{{todo.isComplete}} <button type="button" name="button" ng-click="todo.complete()">done</button></li>
+        <li ng-repeat="task in list.taskList">{{task.text}} complete:{{task.isComplete}} <button type="button" name="button" ng-click="task.complete()">done</button></li>
       </ul>
     </div>
 
