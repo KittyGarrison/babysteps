@@ -7,7 +7,7 @@
 
       function ToDoController() {
         var vm = this;
-        vm.message = "todo message";
+        vm.todoText = "";
       };
 
 })();
