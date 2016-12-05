@@ -15,11 +15,12 @@
 
       <ul>
         <li ng-repeat="task in list.taskList">
-          <span ng-click="task.edit()">{{task.text}}</span> complete:{{task.isComplete}}
-          <button type="button" name="button" ng-click="task.complete()">done</button><br>
-          <form ng-show="task.editMode" ng-submit="task.updateText(newText)">
-            <input type="text" ng-model="newText">
+          <form ng-show="task.editMode" ng-submit="task.updateText()">
+            <input type="text" ng-model="task.text">
           </form>
+          <span ng-hide="task.editMode" ng-click="task.edit()">{{task.text}}</span> complete:{{task.isComplete}}
+          <button type="button" name="button" ng-click="task.complete()">done</button><br>
+
         </li>
       </ul>
     </div>
