@@ -20,8 +20,15 @@
         function removeTask(task){
           // find the index of the task in taskList and use taskList.splice(index,1) to remove that task
         }
+        
+        var count = 100;
 
         function Task(text){
+          function incrementedId(){
+            count = count +1;
+            return count
+          };
+          this.id = incrementedId();
           this.text = text;
           this.isComplete = false;
           this.editMode = false;

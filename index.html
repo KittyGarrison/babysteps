@@ -18,12 +18,15 @@
           <form ng-show="task.editMode" ng-submit="task.updateText()">
             <input type="text" ng-model="task.text">
           </form>
-          <span ng-hide="task.editMode" ng-click="task.edit()">{{task.text}}</span> complete:{{task.isComplete}}
+          <span ng-hide="task.editMode" ng-click="task.edit()">{{task.text}}</span>
+          <br>
+          id:{{task.id}} complete:{{task.isComplete}}
           <button type="button" name="button" ng-click="task.complete()">done</button><br>
 
         </li>
       </ul>
     </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script src="scripts/app.js"></script>
