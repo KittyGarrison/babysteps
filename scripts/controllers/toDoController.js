@@ -10,7 +10,6 @@
         vm.taskText = "";
         vm.taskList = [];
         vm.addTask = addTask;
-        // vm.deleatTask = removeTask(findTask);
         vm.removeTask = removeTask;
 
         function addTask(text){
@@ -18,21 +17,12 @@
           vm.taskText = "";
         };
 
-
-        function removeTask(index){
-          console.log("called removeTask");
-          vm.taskList.splice(index,1)
+        function removeTask(task){
+          vm.taskList.splice(findTask(task),1)
         };
 
-        function findTask(id){
-          console.log("called find task");
-          for (var i = 0; i < vm.taskList.length; i++) {
-            if (tasklist[i].id === id){
-              return i;}
-              else {
-              console.log("not in there");
-            }
-          }
+        function findTask(task){
+          return vm.taskList.indexOf(task);
         }
 
         var count = 100;

@@ -22,7 +22,7 @@
           <br>
           id:{{task.id}} complete:{{task.isComplete}}
           <button type="button" name="button" ng-click="task.complete()">done</button>
-          <button type="button" name="button" ng-click=list.removeTask(list.tasklist.indexOf(task))>delete</button><br>
+          <button type="button" name="button" ng-click=list.removeTask(task)>delete</button><br>
 
         </li>
       </ul>
